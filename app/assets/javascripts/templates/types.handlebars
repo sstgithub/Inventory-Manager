@@ -1,8 +1,12 @@
 <h2> Types </h2>
 
 <ul>
-	{{#each}}
-		<li>{{metalName}}</li>
-	{{/each}}
+  {{#each}}
+    <li>
+      {{#link-to 'type' this}}
+        {{metalName}}
+      {{/link-to}}
+    </li>
+  {{/each}}
 </ul>
 
