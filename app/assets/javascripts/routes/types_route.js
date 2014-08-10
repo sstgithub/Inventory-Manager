@@ -1,5 +1,5 @@
 // For more information see: http://emberjs.com/guides/routing/
 
-Basebox.Router.map(function() {
-  this.resource('types');
+Basebox.TypesRoute = Ember.Route.extend({
+
 });
