@@ -22,4 +22,6 @@
 // for more details see: http://emberjs.com/guides/application/
 Basebox = Ember.Application.create();
 
+Basebox.ApplicationAdapter = DS.RESTAdapter;
+
 //= require_tree .
