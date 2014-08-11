@@ -4,6 +4,6 @@ class TypesController < ApplicationController
 	end
 
 	def show
-		render json: Story.find(params[:id])
+		render json: Type.find(params[:id])
 	end
 end
