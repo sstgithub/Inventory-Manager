@@ -3,7 +3,11 @@
 Basebox.TypesRoute = Ember.Route.extend({
 
   model: function() {
-    return this.store.find('type');
+    this.store.find('type');
+
+    return this.store.filter('type', function(type) {
+    	return !type.get('isNew');
+    });
   }
 
 });
