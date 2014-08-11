@@ -7,8 +7,11 @@ Basebox.TypesNewRoute = Ember.Route.extend({
 
 	actions: {
 		create: function(type) {
-			type.save();
-			this.transitionTo('types');
+			var route = this;
+
+			type.save().then(function() {
+				route.transitionTo('types');
+			});
 		}
 	}
 });

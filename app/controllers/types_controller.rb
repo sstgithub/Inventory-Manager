@@ -6,4 +6,15 @@ class TypesController < ApplicationController
 	def show
 		render json: Type.find(params[:id])
 	end
+
+	def create
+		sleep 0.5
+		render json: Type.create(type)
+	end
+
+	private
+
+	def type
+		params[:type].permit(:metal_name, :type_name, :quantity)
+	end
 end
