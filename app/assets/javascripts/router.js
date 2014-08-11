@@ -2,7 +2,9 @@
 
 Basebox.Router.map(function() {
   this.resource('types', function() {
-  	this.resource('type', { path: ':type_id' });
+  	this.resource('type', { path: ':type_id' }, function() {
+  		this.route('edit');
+  	});
   	this.route('new');
   });
 });

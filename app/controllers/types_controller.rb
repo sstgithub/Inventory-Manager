@@ -12,6 +12,16 @@ class TypesController < ApplicationController
 		render json: Type.create(type)
 	end
 
+	def update
+		render json: Type.find(params[:id]).tap { |t| t.update_attributes(type) }
+	end
+
+	def destroy
+		Type.find(params[:id]).destroy
+		head 204
+	end
+
+
 	private
 
 	def type
