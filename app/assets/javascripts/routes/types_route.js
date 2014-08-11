@@ -2,4 +2,18 @@
 
 Basebox.TypesRoute = Ember.Route.extend({
 
+  model: function() {
+    this.store.find('type');
+
+    return this.store.filter('type', function(type) {
+    	return !type.get('isNew');
+    });
+  },
+
+  actions: {
+  	"delete": function(type) {
+  		type.destroyRecord();
+  	}
+  }
+
 });

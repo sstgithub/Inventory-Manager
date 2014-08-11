@@ -1,2 +1,18 @@
 <h2> Types </h2>
 
+<ul>
+  {{#each}}
+    <li>
+      {{#link-to 'type' this}}
+        {{metalName}}
+        {{typeName}}:
+        {{quantity}} pieces
+      {{/link-to}}
+      <button {{action 'delete' this}}>X</button>
+    </li>
+  {{/each}}
+</ul>
+
+<p>{{#link-to 'types.new'}}Create a new metal type{{/link-to}}</p>
+
+{{outlet}}
