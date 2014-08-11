@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140810221900) do
+ActiveRecord::Schema.define(version: 20140811211820) do
+
+  create_table "attributes", force: true do |t|
+    t.integer  "type_id"
+    t.string   "attr_name"
+    t.string   "attr_value"
+    t.boolean  "attr_req"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "types", force: true do |t|
     t.string   "type_name"
