@@ -1,4 +1,4 @@
-Basebox.Store = DS.Store.extend({
+Basebox.ApplicationStore = DS.Store.extend({
 
 });
 
