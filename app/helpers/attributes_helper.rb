@@ -1,2 +1,2 @@
-module AttributesHelper
+module AttribsHelper
 end

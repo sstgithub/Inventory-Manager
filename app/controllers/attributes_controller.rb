@@ -1,2 +1,2 @@
-class AttributesController < ApplicationController
+class AttribsController < ApplicationController
 end

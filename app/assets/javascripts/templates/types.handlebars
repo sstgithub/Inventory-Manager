@@ -4,7 +4,7 @@
   {{#each}}
     <li>
       {{#link-to 'type' this}}
-        {{metalName}} {{typeName}} ({{attributes.length}} attributes): {{quantity}} pieces
+        {{metalName}} {{typeName}} ({{attribs.length}} attributes): {{quantity}} pieces
       {{/link-to}}
       <button {{action 'delete' this}}>X</button>
     </li>

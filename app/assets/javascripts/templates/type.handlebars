@@ -7,7 +7,7 @@
 <div>
 	<h5>Attributes</h5>
 		<ul>
-			{{#each attributes}}
+			{{#each attribs}}
 				<li>{{attrName}}: {{attrValue}} 
 					{{#if attrReq}}
 						(Required)
@@ -19,6 +19,6 @@
 
 <p>{{#link-to 'type.edit'}}Edit names{{/link-to}}</p>
 
-<p>{{#link-to 'attributes' this}}Show attributes{{/link-to}}</p>
+<p>{{#link-to 'attribs' this}}Show attributes{{/link-to}}</p>
 
 {{outlet}}

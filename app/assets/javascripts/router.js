@@ -8,5 +8,5 @@ Basebox.Router.map(function() {
   	this.route('new');
   });
 
-  this.resource('attributes');
+  this.resource('attribs');
 });
