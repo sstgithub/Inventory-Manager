@@ -18,8 +18,8 @@ Basebox.Router.map(function() {
   			this.resource('attrib', { path: ':attrib_id' }, function() {
   				this.route('edit');
   			});
-  		});
   		this.route('new');
+  		});
   	});
   	this.route('new');
   });

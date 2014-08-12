@@ -2,6 +2,7 @@
 
 Basebox.Attrib = DS.Model.extend({
   type: DS.belongsTo('type'),
+  typeId: DS.attr('number'),
   attrName: DS.attr('string'),
   attrValue: DS.attr('string'),
   attrReq: DS.attr('boolean')
