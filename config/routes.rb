@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :attributes
+  resources :attribs
 
   resources :types
 
