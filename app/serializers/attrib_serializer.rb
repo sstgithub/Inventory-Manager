@@ -1,3 +1,6 @@
 class AttribSerializer < ActiveModel::Serializer
-  attributes :id, :type_id, :attr_name, :attr_value, :attr_req
+	embed :ids, include: true
+
+  attributes :id, :attr_name, :attr_value, :attr_req
+  has_many :types
 end

@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812135700) do
+ActiveRecord::Schema.define(version: 20140812211456) do
 
   create_table "attribs", force: true do |t|
-    t.integer  "type_id"
     t.string   "attr_name"
     t.string   "attr_value"
     t.boolean  "attr_req"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "attribs_types", id: false, force: true do |t|
+    t.integer "attrib_id"
+    t.integer "type_id"
   end
 
   create_table "types", force: true do |t|
