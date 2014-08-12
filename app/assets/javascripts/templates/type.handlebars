@@ -9,13 +9,14 @@
 		<ul>
 			{{#each attribs}}
 				<li>{{attrName}}: {{attrValue}} 
-					{{#if attrReq}}
+					{{!-- {{#if attrReq}}
 						(Required)
 					{{#else}}
 						(Optional)
-					{{/if}}
+					{{/if}} --}}
 				</li>
 			{{/each}}
+</div>
 
 <p>{{#link-to 'type.edit'}}Edit names{{/link-to}}</p>
 
