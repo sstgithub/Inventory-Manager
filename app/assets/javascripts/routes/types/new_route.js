@@ -5,13 +5,25 @@ Basebox.TypesNewRoute = Ember.Route.extend({
 		return this.store.createRecord('type');
 	},
 
-	actions: {
-		create: function(type) {
-			var route = this;
+	// actions: {
+	// 	create: function(type) {
+	// 		var route = this;
 
-			type.save().then(function() {
-				route.transitionTo('types');
-			});
+	// 		type.save().then(function() {
+	// 			alert('saved')
+	// 			route.transitionTo('types');
+	// 		});
+	// 	}
+	// }
+
+	actions: {
+		create: function() {
+			var newType = this.get('currentModel');
+			var self = this;
+			newType.save().then(
+				function() {self.transitionTo('types') },
+				function() { }
+			);
 		}
 	}
 });

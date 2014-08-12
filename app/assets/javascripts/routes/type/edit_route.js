@@ -5,9 +5,24 @@ Basebox.TypeEditRoute = Ember.Route.extend({
 		return this.modelFor('type');
 	},
 
+	// actions: {
+	// 	update: function(type) {
+	// 		var route = this;
+
+	// 		type.save().then(function() {
+	// 			route.transitionTo('type');
+	// 		})
+	// 	}
+	// }
+
 	actions: {
-		update: function(type) {
-			type.save();
+		update: function() {
+			var editType = this.get('currentModel');
+			var self = this;
+			editType.save().then(
+				function() {self.transitionTo('type') },
+				function() { }
+			);
 		}
 	}
 });
