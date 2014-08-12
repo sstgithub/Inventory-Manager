@@ -1,15 +1,26 @@
 <form {{action 'update' this on="submit"}}>
 
+	
+
 	<p>
-		{{input type='text' value=metalName}}
+		Metal Name: {{input type='text' value=metalName}}
+		{{#each error in errors.metalName}}
+			{{error.message}}
+		{{/each}}
 	</p>
 
 	<p>
-		{{input type='text' value=typeName}}
+		Metal Type: {{input type='text' value=typeName}}
+		{{#each error in errors.typeName}}
+			{{error.message}}
+		{{/each}}
 	</p>
 
 	<p>
-		{{input type='number' min='0' step='1' value=quantity}}
+		Quantity: {{input type='number' min='0' step='1' value=quantity}}
+		{{#each error in errors.quantity}}
+			{{error.message}}
+		{{/each}}
 	</p>
 
 	<button>Update</button>
