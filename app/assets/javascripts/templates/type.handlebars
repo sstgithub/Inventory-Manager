@@ -9,7 +9,7 @@
 		<ul>
 			{{#each attribs}}
 				<li>
-					{{#link-to 'attrib.edit' this}}
+					{{#link-to 'attrib.edit' this.id}}
 						{{attrName}}: {{attrValue}} 
 							{{#if attrReq}}
 								(Required)
@@ -17,12 +17,13 @@
 								(Optional)
 							{{/if}}
 					{{/link-to}}
+					<button {{action 'delete' this}}>X</button>
 				</li>
 			{{/each}}
 </div>
 
 <p>{{#link-to 'type.edit'}}Edit names{{/link-to}}</p>
 
-<p>{{#link-to 'attribs.new' this}}Create a new attribute{{/link-to}}</p>
+<p>{{#link-to 'attribs.new' this.id}}Create a new attribute{{/link-to}}</p>
 
 {{outlet}}
