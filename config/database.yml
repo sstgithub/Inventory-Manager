@@ -10,3 +10,9 @@ test:
   encoding: unicode
   database: basebox_test
   pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: basebox_production
+  pool: 5
