@@ -4,5 +4,5 @@ Basebox.Attrib = DS.Model.extend({
   type: DS.hasMany('type'),
   attrName: DS.attr('string'),
   attrValue: DS.attr('string'),
-  attrReq: DS.attr('boolean')
+  attrReq: DS.attr('boolean', {async: true})
 });
