@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140813012940) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "attribs", force: true do |t|
     t.string   "attr_name"
     t.string   "attr_value"
