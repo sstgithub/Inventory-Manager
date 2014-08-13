@@ -3,5 +3,5 @@ class Type < ActiveRecord::Base
 	validates :metal_name, :presence => true
 	validates :quantity, :presence => true
 
-	has_and_belongs_to_many :attribs
+	has_many :attribs
 end

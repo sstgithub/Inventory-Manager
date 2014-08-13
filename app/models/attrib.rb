@@ -4,5 +4,5 @@ class Attrib < ActiveRecord::Base
 	validates :attr_value, :presence => true
 	# belongs_to :type
 
-	has_and_belongs_to_many :types
+	belongs_to :type
 end

@@ -1,8 +1,9 @@
 // for more details see: http://emberjs.com/guides/models/defining-models/
 
 Basebox.Attrib = DS.Model.extend({
-  type: DS.hasMany('type'),
+  // type: DS.belongsTo('type'),
+  typeId: DS.attr('number'),
   attrName: DS.attr('string'),
   attrValue: DS.attr('string'),
-  attrReq: DS.attr('boolean', {async: true})
+  attrReq: DS.attr('boolean')
 });

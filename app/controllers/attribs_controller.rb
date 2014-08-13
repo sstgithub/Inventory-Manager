@@ -6,12 +6,10 @@ class AttribsController < ApplicationController
 
 	def show
 		render json: Attrib.find(params[:id])
-		render json: Type.find(params[:type_id])
 	end
 
 	def create
-		@type = Type.find(params[:type_id])
-		@attrib = @type.attribs.create(attrib_params)
+		@attrib = Attrib.new(attrib_params)
 		if @attrib.save
 			respond_with @attrib
 		else

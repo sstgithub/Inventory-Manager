@@ -4,5 +4,5 @@ Basebox.Type = DS.Model.extend({
   typeName: DS.attr('string'),
   metalName: DS.attr('string'),
   quantity: DS.attr('number'),
-  attribs: DS.hasMany('attrib', {async: true})
+  attribs: DS.hasMany('attrib')
 });
