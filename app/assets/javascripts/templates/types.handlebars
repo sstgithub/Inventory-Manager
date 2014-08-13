@@ -1,10 +1,10 @@
-<h2> Types </h2>
+<h2> Current Inventory </h2>
 
 <ul>
   {{#each}}
     <li>
       {{#link-to 'type' this}}
-        {{metalName}} {{typeName}}: {{quantity}} pieces
+        {{metalName}} {{typeName}} ({{attribs.length}} attributes): {{quantity}} pieces
       {{/link-to}}
       <button {{action 'delete' this}}>X</button>
     </li>

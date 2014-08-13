@@ -1,0 +1,32 @@
+<form {{action 'create' this on="submit"}}>
+	
+	<p>
+		Type: {{input type='number' value=typeId}}
+	</p>
+
+	<p>
+		Attribute Name: {{input type='text' value=attrName}}
+		{{#each error in errors.attrName}}
+			{{error.message}}
+		{{/each}}
+	</p>
+
+	<p>
+		Attribute Value: {{input type='text' value=attrValue}}
+		{{#each error in errors.attrValue}}
+			{{error.message}}
+		{{/each}}
+	</p>
+
+	<p>
+		Required: {{input type='checkbox' checked=attrReq}}
+		{{#each error in errors.attrReq}}
+			{{error.message}}
+		{{/each}}
+	</p>
+
+
+
+
+	<button>Create</button>
+</form>

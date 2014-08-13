@@ -4,6 +4,26 @@
 	{{typeName}}
 </div>
 
-<p>{{#link-to 'type.edit'}}Edit this metal type{{/link-to}}</p>
+<div>
+	<h5>Attributes</h5>
+		<ul>
+			{{#each attribs}}
+				<li>
+					{{#link-to 'attrib.edit' this.id}}
+						{{attrName}}: {{attrValue}} 
+							{{#if attrReq}}
+								(Required)
+							{{else}}
+								(Optional)
+							{{/if}}
+					{{/link-to}}
+					<button {{action 'delete' this}}>X</button>
+				</li>
+			{{/each}}
+</div>
+
+<p>{{#link-to 'type.edit'}}Edit names{{/link-to}}</p>
+
+<p>{{#link-to 'attribs.new' this.id}}Create a new attribute{{/link-to}}</p>
 
 {{outlet}}

@@ -41,6 +41,6 @@ class TypesController < ApplicationController
 	private
 
 	def type_params
-		params.require(:type).permit(:metal_name, :type_name, :quantity)
+		params.require(:type).permit(:metal_name, :type_name, :quantity, :created_at, :updated_at)
 	end
 end
