@@ -1,1 +1,1 @@
-=== [Heroku link]http://calm-inlet-9636.herokuapp.com/#/types
+=== [Heroku link](http://calm-inlet-9636.herokuapp.com/#/types)
