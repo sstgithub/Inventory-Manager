@@ -1,1 +1,1 @@
-* Click [Heroku link](http://calm-inlet-9636.herokuapp.com/#/types) to go to Heroku link for this app.
+* Click [heroku link](http://calm-inlet-9636.herokuapp.com/#/types) to go to Heroku link for this app.
